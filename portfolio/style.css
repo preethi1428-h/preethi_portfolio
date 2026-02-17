@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+:root{
+    --nav-offset: 90px; /* space equal to fixed header height */
+}
+
 body{
     background:#0b1220;
     color:white;
@@ -23,7 +27,13 @@ body{
     grid-template-columns:1fr auto;
     align-items:center;
     padding:20px 60px;
+    height: var(--nav-offset);
     background:#000;
+}
+
+/* Ensure anchored targets are scrolled into view below the fixed header */
+[id] {
+    scroll-margin-top: calc(var(--nav-offset) + 10px);
 }
 
 .logo{

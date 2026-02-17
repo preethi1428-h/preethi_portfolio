@@ -35,14 +35,14 @@
 
         <div class="buttons">
             <a href="#project" class="btn blue">View Projects</a>
-            <a href="#detail" class="btn black">Contact Me</a>
+            <a href="#contactForm" class="btn black">Contact Me</a>
         </div>
     </div>
 
 </section>
 
-<div class="main">
-<section id="aboutme" class="about" >
+<div class="main" id="aboutme">
+<section  class="about" >
 
     <h1>About <span>Me</span></h1>
 
@@ -110,8 +110,9 @@
 
 
 
+<div id="skills" >
 
-<section class="skills-section" id="skills">
+<div class="skills-section" >
     <h1>My <span>Skills</span></h1>
 
     <div class="circle-skills">
@@ -162,7 +163,7 @@
         </div>
 
         <div class="circle-box">
-            <div class="circle fastapi">
+<div class="circle fastapi">
                 <span>75%</span>
             </div>
              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128">
@@ -205,11 +206,11 @@
             <p>Figma</p>
         </div>
     </div>
-</section>
+</div>
+</div>
 
-
-
-<section class="projects" id="project">
+<div id="project">
+<section class="projects" >
 
   <h1 class="my-project">My <span>Projects</span></h1>
 <p class="sub">Some of my recent work</p>
@@ -285,7 +286,7 @@
 
 </div>
 </section>
-
+</div>
 <section class="contact-pro" id="contact">
 
     <div class="contact-wrapper">
@@ -327,10 +328,10 @@
         <div class="contact-form">
             <h3>Send a Message</h3>
 
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -338,6 +339,13 @@
     </div>
 
 </section>
+<!-- Load EmailJS first, init with your public key, then load the form handler -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    /* Replace the string below with your EmailJS public key */
+    emailjs.init("7jFJIIALW1-eG-0H_");
+</script>
+<script src="contactForm.js"></script>
 
 <footer>
     <h2 class="logo">Preethi<span>.</span></h2>
