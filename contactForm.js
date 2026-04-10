@@ -1,14 +1,4 @@
-// Contact form handling with validation and EmailJS send.
-// Replace the placeholders below with your EmailJS public key, service ID and template ID.
-// - Sign up at https://www.emailjs.com/
-// - Create a service, create a template, then copy the public key and IDs into the placeholders.
 
-/* Example setup (replace values):
-   emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
-   emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-*/
-
-// initialize (replace with your public key)
 if (typeof emailjs !== 'undefined' && emailjs.init) {
   try { emailjs.init("ZxMekqTuldL-AswXM"); } catch(e) { /* noop if not configured */ }
 }
